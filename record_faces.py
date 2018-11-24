@@ -19,11 +19,11 @@ while (NEXT_USER == 'Y'):
   cap = cv2.VideoCapture(0)
   uname = input("Enter your name: ")
   udrink = input("Enter your drink preference: ")
-  ushot = input("Enter your shot preference('NULL' if none): ")
+  #ushot = input("Enter your shot preference('NULL' if none): ")
 
 
   #This inserts all the data that the users entered, into the database
-  c.execute('INSERT INTO users (Name, Drink_Preference, Shot_Preference, Four_Digit_Identifier) VALUES (?,?,?,?)', (uname,udrink,ushot,four_dig_id))
+  c.execute('INSERT INTO users (Name, Drink_Preference, Four_Digit_Identifier) VALUES (?,?,?)', (uname,udrink,four_dig_id))
   uid = c.lastrowid
   
   #End data insertion
